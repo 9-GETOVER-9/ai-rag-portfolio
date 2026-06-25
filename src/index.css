@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background: #070809;
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.primary-action,
+.secondary-action {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 8px;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.primary-action {
+  background: #c11515;
+  color: #ffffff;
+}
+
+.secondary-action {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+  transform: translateY(-1px);
+}
+
+.secondary-action:hover {
+  border-color: rgba(255, 105, 105, 0.55);
+  color: #ffffff;
+}
+
+.project-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
+    #101215;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-height: 430px;
+  padding: 24px;
+}
+
+.skill-pill {
+  background: rgba(193, 21, 21, 0.12);
+  border: 1px solid rgba(255, 105, 105, 0.2);
+  border-radius: 999px;
+  color: #ffc4c4;
+  display: inline-flex;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.contact-card {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e2e8f0;
+  display: flex;
+  gap: 12px;
+  min-height: 58px;
+  padding: 0 18px;
+}
+
+.line-waves path {
+  animation: wave-draw 5.8s ease-in-out infinite alternate;
+  stroke-dasharray: 0.28 0.72;
+  stroke-dashoffset: 0;
+}
+
+@keyframes wave-draw {
+  from {
+    stroke-dashoffset: 0;
+    transform: translateX(-28px);
+  }
+
+  to {
+    stroke-dashoffset: -0.75;
+    transform: translateX(28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .line-waves path,
+  .primary-action,
+  .secondary-action {
+    animation: none;
+    transition: none;
+  }
+}
