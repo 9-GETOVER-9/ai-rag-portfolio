@@ -19,6 +19,10 @@ npm run build
 
 ## 部署
 
-推送到 `main` 后，GitHub Actions 会自动构建并发布到 GitHub Pages：
+运行部署脚本后，构建产物会发布到 `gh-pages` 分支：
+
+```bash
+npm run deploy
+```
 
 https://9-getover-9.github.io/ai-rag-portfolio/
